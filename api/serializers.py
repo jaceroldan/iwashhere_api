@@ -15,6 +15,7 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Customer
         fields = (
+            'pk',
             'first_name',
             'last_name',
             'contact_number',
@@ -22,9 +23,10 @@ class CustomerSerializer(serializers.HyperlinkedModelSerializer):
         )
 
 
-class OrderSerializer(serializers.HyperlinkedModelSerializer):
+class OrderSerializer(serializers.ModelSerializer):
     class Meta:
         model = Order
+        depth = 1
         fields = (
             'date_created',
             'customer',
