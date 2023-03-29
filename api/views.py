@@ -12,7 +12,7 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
     queryset = Customer.objects.all()
     serializer_class = CustomerSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 
 class OrderViewSet(viewsets.ModelViewSet):
@@ -22,4 +22,4 @@ class OrderViewSet(viewsets.ModelViewSet):
 
     queryset = Order.objects.all() 
     serializer_class = OrderSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
