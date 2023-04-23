@@ -22,7 +22,7 @@ class Order(models.Model):
         (GCASH, 'GCash'),
     )
 
-    date_created = models.DateTimeField()
+    date_created = models.DateTimeField(auto_now_add=True)
     customer = models.ForeignKey(
         Customer, on_delete=models.CASCADE, related_name='orders')
     weight = models.DecimalField(
